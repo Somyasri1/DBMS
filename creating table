@@ -1,0 +1,11 @@
+//cretaing table//
+create table students ( 
+    name varchar2(50) NOT NULL, 
+    roll number(3) Primary key, 
+    age number(2),  
+    bname varchar(5), 
+    per number(5,3), 
+    email varchar(30) 
+)
+
+  table created 
