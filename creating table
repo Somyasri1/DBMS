@@ -219,3 +219,25 @@ EMPNO	ENAME	SAL	SALARY_INCREASED
 7876	ADAMS	1100	165
 7900	JAMES	950	142.5
 7934	MILLER	1300	195
+
+// 19) Display all the departments where employee salary greater than average salary of that
+departmen 
+
+
+select distinct dept.dname  
+from emp 
+join dept on emp.deptno = dept.deptno 
+where emp.sal>( 
+    select avg(sal) 
+    from emp e 
+    where emp.deptno=emp.deptno 
+);
+
+o/p:
+
+
+DNAME
+RESEARCH
+SALES
+ACCOUNTING
+
